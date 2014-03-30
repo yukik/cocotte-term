@@ -1,0 +1,23 @@
+{
+  "name": "cocotte-term",
+  "version": "0.0.1",
+  "description": "日時を範囲に変更する",
+  "main": "term.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yukik/cocotte-term.git"
+  },
+  "keywords": [
+    "cocotte"
+  ],
+  "author": "Yuki Kurata <yuki.kurata@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
