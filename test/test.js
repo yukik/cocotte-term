@@ -4,12 +4,28 @@ var term = require('../term.js');
 var assert = require('assert');
 
 var test = function test(input, from, to) {
-	var output = term(input);
+
+	var output;
+
+	try {
+		output = term(input);
+
+	} catch (e) {
+		if (from) {
+			throw e;
+		} else {
+			return; // error発生が正常時
+		}
+	}
+
 	assert(output[0].getTime() === new Date(from).getTime());
 	assert(output[1].getTime() === new Date(to).getTime());
 };
 
 var i,f,t;
+
+i = '昨日';
+test(i, false);
 
 i = '2000年';
 f = '2000-01-01 00:00:00.000';
@@ -40,6 +56,15 @@ i = '2000年10月1日 12時34分56秒';
 f = '2000-10-01 12:34:56.000';
 t = '2000-10-01 12:34:56.999';
 test(i,f,t);
+
+i = ['昨日', '今日'];
+test(i, false);
+
+i = ['2000-1-1', '今日'];
+test(i, false);
+
+i = ['今日', '2001-1-1'];
+test(i, false);
 
 i = ['2000年', '2001年'];
 f = '2000-01-01 00:00:00.000';

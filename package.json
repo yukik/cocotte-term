@@ -1,24 +1,25 @@
 {
   "name": "cocotte-term",
-  "version": "0.0.1",
-  "description": "日時を範囲に変更する",
-  "main": "term.js",
-  "directories": {
-    "example": "example",
-    "test": "test"
+  "description": "日付を範囲に変更する",
+  "homepage": "https://github.com/yukik/cocotte-term",
+  "keywords": [
+    "tools",
+    "time"
+  ],
+  "author": "Yuki Kurata <yuki.kurata@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yukik/cocotte-term.git"
   },
+  "main": "term.js",
+  "version": "0.1.0",
   "scripts": {
     "test": "node ./test/test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yukik/cocotte-term.git"
+  "directories": {
+    "test": "test"
   },
-  "keywords": [
-    "timestamp",
-    "cocotte"
-  ],
-  "author": "Yuki Kurata <yuki.kurata@gmail.com>",
-  "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "license": "MIT"
 }
+
